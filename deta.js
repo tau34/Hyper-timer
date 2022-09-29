@@ -20,19 +20,31 @@ const deta = [
         new Date("2022/09/30 12:30")
     ],
     [
+        "haruto,吉浦駅発(JR)",
+        new Date("2022/09/30 12:40")
+    ],
+    [
         "Kendea&τ.λιυ,ソレイユ着,昼食",
         new Date("2022/09/30 12:50")
     ],
     [
-        "Kendea&τ.λιυ,τ.λιυ宅着",
+        "haruto,天神川駅着,<br>Kendea&τ.λιυと合流",
+        new Date("2022/09/30 13:14")
+    ],
+    [
+        "3人,τ.λιυ宅着",
         new Date("2022/09/30 14:00")
     ],
     [
-        "Kendea&τ.λιυ,本町四丁目発(バス)",
+        "3人,本町四丁目発(バス)",
         new Date("2022/09/30 16:07")
     ],
     [
-        "Kendea&τ.λιυ,広島駅着",
+        "3人,広島駅着",
         new Date("2022/09/30 16:22")
     ]
 ];
+var left = new Array;
+for (var i = 0; i < deta.length; i ++) {
+    left.push(false)
+}
