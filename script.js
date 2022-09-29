@@ -1,6 +1,6 @@
 function onload() {
     for (var i = 0; i < deta.length; i ++) {
-        $(".countdown").append("<tr><td><canvas class=\"canvas\" width=\"100px\" height=\"100px\"></canvas></td><td><h2 class=\"name\">" + deta [i][0] + "</h2></td></tr>")
+        $(".countdown").append("<tr><td><h3 class=\"count\"></h3></td><td><canvas class=\"canvas\" width=\"100px\" height=\"100px\"></canvas></td><td><h2 class=\"name\">" + deta [i][0] + "</h2></td></tr>")
         var context = $(".canvas") [i].getContext("2d");
         $(".canvas").css("marginTop", "15px")
         context.beginPath();
@@ -31,9 +31,28 @@ function onload() {
         result += ":" + solve(now.getSeconds())
         return result;
     }
+    function timestr(t) {
+        var s = Math.floor(t / 1000)
+        if (t >= 60000) {
+            var m = (s - s % 60) / 60
+            s = s % 60
+            if (t >= 3600000) {
+                var h = (m - m % 60) / 60
+                m = m % 60
+                return h + "h" + m + "m";
+            }
+            return m + "m" + s + "s";
+        } else {
+            return s + "s";
+        }
+    }
     function count() {
         now = new Date();
         time.textContent = datestr()
+        var element = $(".count");
+        for (var i = 0; i < element.length; i ++) {
+            element [i].textContent = timestr(deta [i][1].getTime() - now.getTime()) + " left";
+        }
     }
     setInterval(count, 20)
 }

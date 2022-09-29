@@ -24,3 +24,6 @@ h1, h2 {
 table {
     margin: 0 auto;
 }
+td {
+    padding: 0px 20px;
+}
