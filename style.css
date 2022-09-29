@@ -1,0 +1,26 @@
+body {
+    background-color: #7ff;
+    padding: 7px 8px;
+}
+.bckG {
+    padding: 1px 0px;
+}
+.all-wrapper {
+    background-color: #FFF;
+    max-width: 800px;
+    margin: auto;
+    padding: 1px 0px;
+}
+.wrapper {
+    max-width: initial;
+    margin: initial;
+}
+h1, h2 {
+    text-align: center;
+}
+.name {
+    text-align: initial;
+}
+table {
+    margin: 0 auto;
+}
